@@ -24,10 +24,14 @@ The twelve primary skills separate focused capabilities from session coordinatio
 | Reporting bugs | [report-bugs](skills/report-bugs/SKILL.md) |
 | Logging exploration | [exploratory-session-log](skills/exploratory-session-log/SKILL.md) |
 | Domain research | [research-domain](skills/research-domain/SKILL.md) |
-| Reconnaissance sessions | [reconnoiter-software](skills/reconnoiter-software/SKILL.md) |
+| Orientation sessions | [orient-to-software](skills/orient-to-software/SKILL.md) |
 | Exploratory sessions | [explore-software](skills/explore-software/SKILL.md) |
 
 Exploration logs and a persistent application index are created by default unless the user opts out. Domain research reuses cached entries; initial research is capped at five minutes unless the caller specifies otherwise. Further research requires a caller request. A run can span multiple sessions and ends with a proportionate report of at most 1,000 words linking to raw evidence. See [shared application records](skills/exploratory-session-log/references/application-records.md) for storage and structure and [the content map](docs/skill-content-map.md) for capability boundaries.
+
+## Usage and overrides
+
+See [Using the skills](docs/using-skills.md) for default behavior, supported caller overrides, result locations, and example requests.
 
 ## Local installation
 

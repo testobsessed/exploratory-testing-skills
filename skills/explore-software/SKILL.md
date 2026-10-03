@@ -19,8 +19,8 @@ Use the available focused skills when a question calls for them; they are not a 
 - design-experiments: choose variations that discriminate among explanations;
 - observe-behavior: obtain faithful evidence and calibrate claims;
 - exploratory-session-log: preserve raw notes, evidence, coverage, and questions by default;
-- research-domain: reuse or gather timeboxed domain context for reconnaissance;
-- reconnoiter-software: build context when unfamiliar with the software.
+- research-domain: reuse or gather timeboxed domain context for orientation;
+- orient-to-software: build context when unfamiliar with the software.
 
 The loop below remains usable when a focused skill is unavailable. Use logging guidance before substantive exploration unless the user explicitly opts out; honor their format and location. Maintain the application index promptly and produce one proportionate report per run, spanning its sessions, with links to raw evidence and a maximum of 1,000 words. If logging guidance is unavailable, append dated raw records immediately and maintain a small topic index in the caller's workspace; do not defer capture until reporting.
 

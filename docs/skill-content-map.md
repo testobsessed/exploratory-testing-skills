@@ -13,7 +13,7 @@ This split maps the original explore-software material into nine focused capabil
 | Prefer behavioral evidence; evidence fidelity, claim strength, finding layers | observe-behavior | Faithful surfaces, observations versus interpretations, calibrated claims |
 | Domain context (new) | research-domain | User goals, terminology/rules, risks; cache-first, five-minute initial research; caller-requested follow-up only |
 | Session notes protocol, template, append helper; coverage ledger | exploratory-session-log | Default raw logs, persistent evidence index, run reports capped at 1,000 words; helper and legacy marker unchanged |
-| Session setup and source orientation | reconnoiter-software | Relies on cache-first domain research and default shared logging; fuller behavioral reconnaissance techniques remain open |
+| Session setup and source orientation | orient-to-software | Relies on cache-first domain research and default shared logging; fuller behavioral orientation techniques remain open |
 | Exploration loop, adaptive steering, fixing boundary, finishing/pausing | explore-software | Coordinator retains its existing name and invocation |
 
 The field study remains historical evidence, not operational instructions. Its suggested fixed-input reasoning-stability check remains a future experiment-design improvement; this content split does not claim to implement that recommendation.

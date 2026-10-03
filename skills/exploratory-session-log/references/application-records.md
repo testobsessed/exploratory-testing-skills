@@ -3,10 +3,15 @@
 Use one persistent knowledge base per application, shared by these skills across runs. A run may contain multiple sessions. Honor the caller's location and existing project conventions; otherwise use `exploration/` in the application project, with:
 
 - `index.md`: a small persistent topic index;
+- `orientation.md`: the single reusable summary of what can be done with the application, maintained by orient-to-software;
 - `runs/<run-id>/sessions/<session-id>.md`: raw session logs;
 - `runs/<run-id>/report.md`: the run's summary report.
 
 Without a repository, use a caller-specified or suitable writable application workspace and report its location. Do not require Git to log; append directly using the canonical logger, which does not require Git. Identify the application and version/environment to avoid mixing unrelated systems. Reuse an existing index rather than creating a parallel knowledge base. Create only records needed by the work.
+
+## Reusable orientation
+
+Read `orientation.md` to reuse established orientation rather than rerunning it for every exploratory session. When the user or calling agent intentionally initiates another orientation, update relevant portions of this same file in place; do not create another summary or replace it wholesale. Preserve useful knowledge, evidence links, and visible uncertainty. The summary is mutable; each session’s raw log remains separate and append-only.
 
 ## Index
 
