@@ -4,6 +4,7 @@ Use one persistent knowledge base per application, shared by these skills across
 
 - `index.md`: a small persistent topic index;
 - `orientation.md`: the single reusable summary of what can be done with the application, maintained by orient-to-software;
+- `runs/<run-id>/charters.md`: the orchestrator’s running charter list, with status, priority rationale, and evidence/session links;
 - `runs/<run-id>/sessions/<session-id>.md`: raw session logs;
 - `runs/<run-id>/report.md`: the run's summary report.
 

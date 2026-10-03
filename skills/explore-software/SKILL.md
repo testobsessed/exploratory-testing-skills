@@ -24,6 +24,14 @@ Use the available focused skills when a question calls for them; they are not a 
 
 The loop below remains usable when a focused skill is unavailable. Use logging guidance before substantive exploration unless the user explicitly opts out; honor their format and location. Maintain the application index promptly and produce one proportionate report per run, spanning its sessions, with links to raw evidence and a maximum of 1,000 words. If logging guidance is unavailable, append dated raw records immediately and maintain a small topic index in the caller's workspace; do not defer capture until reporting.
 
+## Steer the run toward risk
+
+The caller supplies the initial mission or charter. Maintain a running charter list beginning with that initial charter. Reuse orientation.md when available; otherwise use orient-to-software. Use charter-exploration to carve broad missions into focused charters and add new candidates as observations reveal interesting behavior.
+
+Keep the list in runs/<run-id>/charters.md within the shared application records, unless the caller supplies another location or opts out of persistence. Record each charter's mission, status, priority rationale, and links to the observations and sessions that informed it. Preserve completed and unfinished charters rather than deleting their history.
+
+Steer toward risk: prioritize novel information and the likelihood of undesirable behavior based on existing observations and all available evidence. Reassess priorities as information emerges and after each session, then automatically select the next promising charter without asking the caller to approve each selection. A new charter starts a new session and log; the caller may also split one charter across multiple sessions. Keep the running list and the next selection within the caller's mission and authority.
+
 ## Run the exploration loop
 
 1. Identify the current question and relevant variables, states, paths, or dependencies.
@@ -44,6 +52,14 @@ When the user asks to fix a confirmed problem, close or pause the exploration re
 
 ## Finish or pause deliberately
 
-Stop or pause when the charter is answered, the next experiment requires new authority or information, further information would not change a decision, or another question now has greater value. Do not claim exhaustive coverage merely because many cases ran.
+Finish the current charter when its question is answered, further experiments would yield no useful new information, or another charter has greater information value. Update the list and automatically continue with the next charter while the run remains within its limits. Pause when useful continuation requires missing authority or information.
+
+End the overall run at the first of these three stopping conditions:
+
+- The total exploration timebox expires: one hour by default across all charters and sessions, including orientation and research performed during the run. Honor a caller-specified timebox; a longer budget does not remove the other stopping conditions. Track elapsed time from the start of the run rather than resetting the budget per charter.
+- No charters remain to pursue: the available evidence offers no further identified source of novel risk information. This is exhaustion of the current candidate list, not proof that the software has no undiscovered risks.
+- Abort after five consecutive experiments in which every attempted operation encounters an obvious problem and failures are so pervasive or catastrophic that further exploration is unlikely to yield valuable new information, such as every operation returning HTTP 500 or another error. Count consecutive experiments across charter and session boundaries; reset the streak when an experiment no longer meets this condition. Do not treat five distinct, informative defect discoveries as pervasive failure by themselves.
+
+Record whether the run ended because of its timebox, exhausted charters, or an abort, preserving evidence and unfinished charters with their current priorities. Do not claim exhaustive coverage merely because many cases ran.
 
 Conclude with what was explored, confirmed findings and their evidence, unresolved surprises, rejected and untested hypotheses, material coverage gaps, useful next experiments, and the disposition of temporary artifacts. A session does not pass or fail.

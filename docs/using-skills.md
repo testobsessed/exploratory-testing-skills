@@ -2,7 +2,7 @@
 
 Call a focused skill by name when you need that capability, or ask `explore-software` to coordinate an exploratory session. The skills support web applications, desktop applications, services without a GUI, command-line tools, and other software. They are capabilities to use as needed, not a fixed sequence.
 
-For unfamiliar software, use [orient-to-software](../skills/orient-to-software/SKILL.md). Its predefined charter is: “Explore the target software with all the information available, to discover what I can do with it.” For later exploration, supply a charter describing what you want to learn; reuse the application’s existing orientation and research.
+For unfamiliar software, use [orient-to-software](../skills/orient-to-software/SKILL.md). Its predefined charter is: “Explore the target software with all the information available, to discover what I can do with it.” For later exploration, supply a charter or broad mission describing what you want to learn; reuse the application’s existing orientation and research. The orchestrator maintains a running charter list, creates focused charters from observations, and automatically selects the next charter while steering toward novel information about risks or defects.
 
 ## Defaults and supported overrides
 
@@ -11,6 +11,7 @@ State overrides in the request to the skill. A calling agent can also supply the
 | Choice | Default | How to override or supply it |
 |---|---|---|
 | Target and startup | Use README or other obvious repository startup instructions | Supply a URL, endpoint, executable, or specific startup instructions |
+| Total exploration duration | One hour across the run’s charters and sessions, including orientation and research during the run | Supply another timebox, such as “Explore for two hours” |
 | Orientation duration | Five minutes for the orientation session | “Use a ten-minute orientation timebox” |
 | Initial domain research duration | Five minutes when no cached research exists | “Timebox initial domain research to two minutes” |
 | Further domain research | Reuse cached research; do not automatically refresh gaps or contradictions | Explicitly request additional research and describe its scope |
@@ -22,6 +23,8 @@ State overrides in the request to the skill. A calling agent can also supply the
 | Temporary instrumentation | Only when authorized by the request or project conventions; remove afterward | Explicitly authorize harnesses or instrumentation, and request retention if wanted |
 
 Orientation also stops after three consecutive experiments yield no new information, even if time remains. Increasing its timebox does not remove that stopping rule. Orientation’s five-minute session budget and domain research’s five-minute initial-research budget are separate limits; research performed during orientation consumes the session’s elapsed time.
+
+Exploration also stops when no charters remain that could yield novel risk information. It aborts after five consecutive experiments with pervasive obvious failures, where every attempted operation encounters a problem and further exploration is unlikely to yield valuable new information. These conditions apply even when time remains. The final report records the stopping reason and retains unfinished charters.
 
 Supply login information through the prompt, an environment variable, or an available credential-vault connection. Secrets do not belong in logs. If authentication blocks useful work and no usable login method is available, the explorer asks the caller.
 
@@ -35,6 +38,7 @@ exploration/
   orientation.md
   runs/
     <run-id>/
+      charters.md
       sessions/
         <session-id>.md
       report.md
