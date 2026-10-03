@@ -8,6 +8,8 @@ license: MIT
 
 Keep a live record of an exploratory testing session so its findings can be traced to the experiments and observations that produced them. Chartering is a separate concern: record the supplied charter and follow the session's existing scope.
 
+Logging is enabled by default unless the user explicitly asks not to persist records. Read [shared application records](references/application-records.md) for storage, the persistent application index, and the run report. Reuse the active run and session when called by another skill.
+
 ## Start the log
 
 - Use the log destination specified by the user or delegating agent, or an established project convention. Default to a Markdown file when no other format is required.
@@ -28,9 +30,13 @@ Append entries to the end of the file as the session unfolds. Let observations g
 
 Do not edit, reorder, replace, or delete earlier entries. Correct a mistaken observation by appending another Observation that identifies the earlier entry and the correction. Preserve the original evidence and make the change in understanding visible.
 
+Record research, discoveries, decisions, blockers, and contradictions promptly as Observation entries, distinguishing source evidence from runtime behavior. Index reusable entries immediately. Never keep a separate scratch record for later consolidation.
+
 ## Close the session
 
-Append a `Findings summary` section at the bottom of the log. Summarize findings that may interest the user or receiving agent, with references to the supporting entries. Include unresolved questions, limits of the exploration, or useful follow-up experiments when they affect what the recipient can conclude. Treat unexpected behavior as an observation until there is enough context to establish a defect.
+Append a brief `Findings summary` section at the bottom of the log, linking to the run report. Summarize findings that may interest the user or receiving agent, with references to the supporting entries. Include unresolved questions, limits of the exploration, or useful follow-up experiments when they affect what the recipient can conclude. Treat unexpected behavior as an observation until there is enough context to establish a defect.
+
+At run closure or pause, produce one separate report across all sessions: at most 1,000 words, and much shorter for short runs. Briefly cover work performed, findings and impact, gaps, contradictions, and next steps with references to specific raw entries. Research receives only a brief mention.
 
 Use this summary to guide the user-facing report or handoff to another agent, including an agent acting as an explorer. Point the recipient to the log and relevant evidence. Preserve uncertainty and avoid claims that the session did not establish. If a completed summary needs correction, append the correction or a revised summary; retain the earlier text.
 

@@ -1,0 +1,20 @@
+---
+name: map-touch-points
+description: Discover software entry points and connected places to control or observe behavior for an exploratory investigation.
+---
+
+# Mapping Touch Points
+
+Start at an entry point relevant to the charter: a user action, API request, imported artifact, event, or other way work enters the software. Trace the flow from there, using observed behavior and available implementation evidence to discover further points where you can control what happens, observe what happens, or both. Extend the map as exploration reveals new paths and boundaries.
+
+At each discovered point, record:
+
+- what enters and leaves, including data, events, and state changes;
+- which variables are accessible and their relevant values or conditions;
+- what you can control, what you can observe, and through which interface;
+- relationships to other points, including transformations, dependencies, and delays;
+- what remains inferred or inaccessible and how that limits an experiment.
+
+Use this map to choose where to vary a condition and where to observe its effects. A point may offer control without direct observation, observation without control, or both; connect points when an effect is visible elsewhere. Keep the map provisional rather than requiring a complete system inventory before experimenting.
+
+Use exploratory-session-log to record meaningful discoveries and decisions promptly in the raw session log and index reusable information, unless the user explicitly asks not to log. Reuse the current application records when invoked within an existing run. If that skill is unavailable, append dated evidence and uncertainties in the caller's shared workspace and link reusable entries from its application index.

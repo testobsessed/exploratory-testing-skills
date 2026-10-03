@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explore Software"
+  short_description: "Explore actual behavior through experiments"
+  default_prompt: "Use $explore-software to investigate this software through an evidence-producing exploratory session."
