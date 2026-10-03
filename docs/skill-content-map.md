@@ -25,3 +25,7 @@ The append helper and template moved together to log-exploration without behavio
 ## Migration onto the newer repository
 
 The newer exploratory-session-log remains canonical: record the charter first, experiment intent when an experiment begins, and observations separately as they occur. The migrated log-exploration resources remain for existing marker-based logs. All other capabilities route to the canonical logger. The newer repository license and original logger assets and metadata are preserved.
+
+## Bug reporting
+
+[report-bugs](../skills/report-bugs/SKILL.md) owns report criteria, minimal reproduction, concise contents, and responsibility boundaries. The canonical logger owns session files and links to the reporting skill. [Recovered decisions](bug-reporting-decisions.md) record the interrupted discussion and the caller’s subsequent selection of a separate skill.

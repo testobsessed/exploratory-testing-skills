@@ -15,7 +15,7 @@ Logging is enabled by default unless the user explicitly asks not to persist rec
 - Use the log destination specified by the user or delegating agent, or an established project convention. Default to a Markdown file when no other format is required.
 - Put the session charter at the very top of the file, before the session entries. A charter already stated in the session request is sufficient; preserve its meaning rather than introducing another chartering process. If no charter is available, obtain it before starting the logged exploration.
 - Use [the starting template](assets/session-log-start.md), replacing its charter placeholder before writing the file. It contains only the charter and the session-log heading. Add the findings summary when the session finishes.
-- Read an existing log before continuing it. Preserve its existing contents.
+- Each new session starts a separate log file on disk. A new charter always starts a new session; the caller may also split one charter across multiple sessions. Resume an existing log only when continuing that same session, and preserve its contents.
 
 ## Record experiments and observations
 
@@ -31,6 +31,10 @@ Append entries to the end of the file as the session unfolds. Let observations g
 Do not edit, reorder, replace, or delete earlier entries. Correct a mistaken observation by appending another Observation that identifies the earlier entry and the correction. Preserve the original evidence and make the change in understanding visible.
 
 Record research, discoveries, decisions, blockers, and contradictions promptly as Observation entries, distinguishing source evidence from runtime behavior. Index reusable entries immediately. Never keep a separate scratch record for later consolidation.
+
+## Potential problems and bug reports
+
+Record uncertain concerns as Observations, flagged as potential problems, with the expectation and actual observation. Use [report-bugs](../report-bugs/SKILL.md) when deciding whether to report a bug or writing its report. Append qualifying reports in a `Bug reports` section of this session’s log, linking to the supporting observations. Continue appending subsequent entries without moving earlier material.
 
 ## Close the session
 

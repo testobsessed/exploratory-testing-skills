@@ -10,7 +10,7 @@ Skills, supporting research, and behavioral evaluations for an agent that explor
 
 ## Skills
 
-The eleven primary skills separate focused capabilities from session coordination. Use them as questions arise during exploration, rather than as a fixed sequence.
+The twelve primary skills separate focused capabilities from session coordination. Use them as questions arise during exploration, rather than as a fixed sequence.
 
 | Capability | Skill |
 |---|---|
@@ -21,6 +21,7 @@ The eleven primary skills separate focused capabilities from session coordinatio
 | Working with oracles | [work-with-oracles](skills/work-with-oracles/SKILL.md) |
 | Designing experiments | [design-experiments](skills/design-experiments/SKILL.md) |
 | Observing behavior | [observe-behavior](skills/observe-behavior/SKILL.md) |
+| Reporting bugs | [report-bugs](skills/report-bugs/SKILL.md) |
 | Logging exploration | [exploratory-session-log](skills/exploratory-session-log/SKILL.md) |
 | Domain research | [research-domain](skills/research-domain/SKILL.md) |
 | Reconnaissance sessions | [reconnoiter-software](skills/reconnoiter-software/SKILL.md) |
