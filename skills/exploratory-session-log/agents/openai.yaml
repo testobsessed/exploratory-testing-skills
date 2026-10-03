@@ -1,0 +1,3 @@
+interface:
+  display_name: "Exploratory Session Log"
+  short_description: "Log exploratory experiments, observations, and findings"
