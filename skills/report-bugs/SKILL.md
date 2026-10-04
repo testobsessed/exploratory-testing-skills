@@ -7,6 +7,8 @@ description: Write concise exploratory-testing bug reports for reliably reproduc
 
 The explorer surfaces risks and information. Make judgments needed to choose what to explore and describe findings; leave severity and priority to the reviewer. Resolving product uncertainty is not the explorer’s responsibility.
 
+This skill owns the distinction between an observation and a bug report. Oracle and invariant guidance supplies expectations; it does not add a requirement for stakeholder agreement before reporting behavior that meets the criteria below.
+
 ## Observation or bug report
 
 When the specification does not state expected behavior, use judgment about what is reasonable, informed by the domain research already available. Log the expectation and actual observation and flag an uncertain concern as a potential problem. Do not require agreement or resolution before supplying that information.

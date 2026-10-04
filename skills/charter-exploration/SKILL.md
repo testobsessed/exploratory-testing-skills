@@ -24,7 +24,7 @@ Use exploratory-session-log unless the caller opts out; reuse the active session
 
 ## Slice a broad mission into charters
 
-The caller supplies the initial mission or charter; it may be as broad as “Explore DuckSim to discover unknown unknowns.” Use existing orientation, variables, observations, and other available evidence to carve off focused charters that can yield useful information. When an exploratory run needs missing orientation, use orient-to-software to establish what can be done with the target. For a standalone chartering request, use available context and state gaps without starting orientation.
+The caller supplies the initial mission or charter; it may be as broad as “Explore DuckSim to discover unknown unknowns.” Use existing orientation, caller-provided context, variables, observations, and other available evidence to carve off focused charters that can yield useful information. Use orient-to-software only when missing knowledge prevents choosing a faithful first experiment, not merely because orientation.md is absent. For a standalone chartering request, use available context and state gaps without starting orientation.
 
 Steer toward risk: favor the novelty of information a charter could reveal and the likelihood of undesirable behavior, grounded in existing observations and all other available information. Explain the evidence behind each candidate's priority; do not invent numerical risk scores or mistake an untested suspicion for a finding.
 

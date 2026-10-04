@@ -1,10 +1,10 @@
 # Durable Session Notes
 
-Use this protocol by default unless the user explicitly asks not to log. Read application-records.md for shared storage and indexing, including work outside a repository. User-provided format and location instructions override this protocol.
+This protocol preserves existing logs using the explore-software append-only marker. Use [exploratory-session-log](../../exploratory-session-log/SKILL.md) for new sessions and common logging rules. Read [application-records.md](application-records.md) when legacy callers need shared-record guidance. User-provided format and location instructions override this protocol.
 
 ## Start the record
 
-Create the file before substantive exploration. Adapt `../assets/session-notes-template.md` and capture:
+When an existing integration requires a marker-based file, create it before substantive exploration. Adapt `../assets/session-notes-template.md` and capture:
 
 - target and mission;
 - known surprises or seed questions;
@@ -43,7 +43,7 @@ Do not force all six labels into trivial entries, but do not omit information ne
 
 ## Close or pause
 
-Append `## Summary` only when closing or pausing the session. Keep it brief and link to a separate run report when needed. At run closure or pause, follow the reporting rules in application-records.md: a short single-session closing summary may serve as the report; multiple sessions or a caller request need a separate report. Keep either form within 1,000 words and substantially shorter for short runs. Do not rewrite the raw stream while producing either summary. Select what matters from:
+Append `## Summary` only when closing or pausing the session. Follow the [canonical closing rules](../../exploratory-session-log/SKILL.md#close-the-session), retaining this legacy heading for helper compatibility. Do not rewrite the raw stream while producing a summary. Select what matters from:
 
 1. the charter and scope actually covered;
 2. confirmed findings with evidence;

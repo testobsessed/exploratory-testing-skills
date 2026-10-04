@@ -17,5 +17,4 @@ An oracle is a fallible basis for evaluating behavior. Useful oracle patterns in
 - **Always/Never:** domain rules hold across inputs, sequences, configurations, and failures.
 - **Comparable or standard:** behavior agrees with an applicable product convention, protocol, regulation, or agreed reference.
 
-When stakeholders have not agreed that an oracle applies, report the observation and product question rather than unilaterally declaring a defect.
-
+An oracle supplies an expectation, not automatic proof of a defect. Follow [report-bugs](../../report-bugs/SKILL.md) when classifying a finding; unresolved expectations remain product questions unless the observed behavior meets its reporting criteria.

@@ -27,7 +27,11 @@ The twelve primary skills separate focused capabilities from session coordinatio
 | Orientation sessions | [orient-to-software](skills/orient-to-software/SKILL.md) |
 | Exploratory sessions | [explore-software](skills/explore-software/SKILL.md) |
 
-Raw exploration logs are kept by default unless the user opts out. Supporting records are created when useful; indexes are updated at session closure or handoff. The calling explorer agent can own coordination directly and use focused skills without explore-software. Domain research reuses cached entries; initial research is capped at five minutes unless the caller specifies otherwise. Further research requires a caller request. A run can span multiple sessions and ends with a proportionate report of at most 1,000 words linking to raw evidence. See [shared application records](skills/exploratory-session-log/references/application-records.md) for storage and structure and [the content map](docs/skill-content-map.md) for capability boundaries.
+Raw exploration logs are kept by default unless the user opts out. Basic logging is self-contained in [exploratory-session-log](skills/exploratory-session-log/SKILL.md); supporting records are created when useful and indexed at closure or handoff. The calling explorer agent can own coordination directly and use focused skills without explore-software.
+
+Reuse existing orientation and caller-provided context; a missing orientation file alone does not require a session. Research answers domain questions needed for the next experiment, reuses cached entries, and stops once sufficient context exists. Initial research has a five-minute ceiling within the enclosing budget; further research requires a caller request. Disabling persistence does not disable otherwise-authorized research.
+
+A run can span multiple sessions. Its timebox includes preparation, startup, exploration, record maintenance, and reporting; a bounded investigation ends when its question is answered to the requested confidence. Reports are at most 1,000 words, with links to raw evidence. See [shared application records](skills/exploratory-session-log/references/application-records.md) for multi-session storage and indexing and [the content map](docs/skill-content-map.md) for capability boundaries.
 
 ## Usage and overrides
 

@@ -17,6 +17,12 @@ Prefer paired experiments that can eliminate explanations:
 
 When an operation has multiple mechanisms, enumerate **all the ways** that matter to the charter. Do not generalize from one mechanism to another without evidence.
 
+## Check run-to-run variation when it matters
+
+When outputs can vary materially across runs, such as AI-generated decisions or action items, repeat a fixed input through the same path before attributing a difference to a changed variable. Keep starting state, configuration, and input fixed where possible; record uncontrolled dependencies. Compare meaning, counts, ownership, omissions, and evidence links, distinguishing harmless presentation changes from differences that affect what a user would believe or do.
+
+Choose repetitions to answer the current question within the remaining budget. Stable results in a few runs do not establish determinism; observed variation may require repeating both sides of a comparison. This check is conditional on the system and charter, not a requirement for every experiment.
+
 ## Explore delayed and asynchronous behavior
 
 For every meaningful delay, identify:

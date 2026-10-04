@@ -1,13 +1,3 @@
-# Coverage Ledger
+# Coverage Ledger Compatibility
 
-## Use a lightweight coverage ledger
-
-For broad charters, keep a small table in the raw notes:
-
-| Dimension | Values exercised | Result | Material remainder |
-|---|---|---|---|
-| Interaction path | primary, alternate | equivalent | import path |
-| Runtime state | fresh, exercised | differs after reset | cold reload |
-
-Update coverage by appending new entries rather than rewriting prior raw notes. Use the ledger to choose neglected dimensions and to report limits honestly. It is a steering aid, not a prewritten test plan or a claim of completeness.
-
+Use the canonical [optional coverage ledger](../../exploratory-session-log/references/coverage-ledger.md) when a broad investigation needs help tracking neglected dimensions. This path remains for existing callers. Preserve legacy raw history by appending updates; do not create a second ledger solely because the guidance moved.

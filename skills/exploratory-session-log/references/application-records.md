@@ -12,7 +12,7 @@ Without a repository, use a caller-specified or suitable writable application wo
 
 ## Reusable orientation
 
-Read `orientation.md` to reuse established orientation rather than rerunning it for every exploratory session. When the user or calling agent intentionally initiates another orientation, update relevant portions of this same file in place; do not create another summary or replace it wholesale. Preserve useful knowledge, evidence links, and visible uncertainty. The summary is mutable; each session’s raw log remains separate and append-only.
+Reuse established `orientation.md` and caller-provided context rather than rerunning orientation for every exploratory session. A missing summary does not require orientation when enough context exists for a faithful experiment. When orientation is needed or explicitly requested, update relevant portions of this same file in place; do not create another summary or replace it wholesale. Preserve useful knowledge, evidence links, and visible uncertainty. The summary is mutable; each session's raw log remains separate and append-only.
 
 ## Index
 
@@ -28,8 +28,42 @@ Domain research entries cover user goals, terminology and rules, risks, and unan
 
 ## Run report
 
-At the end or pause of a run, report across its sessions. For a short single-session run, its closing findings summary can serve as the report; write a separate report for multiple sessions or when requested. Briefly cover work performed, key findings and user impact, unresolved questions or contradictions, material coverage gaps, and useful next steps. Include direct references to specific session-log entries. Mention research only briefly; its detail remains in the logs.
-
-The report must be at most **1,000 words**, regardless of run length. Scale down sharply for short runs; the cap is not a target. Keep reporting proportional and do not repeat every raw entry. Logs remain append-only when reports or indexes change. When a separate run report exists, session findings summaries point to it. Otherwise the single session's closing summary is the report.
+Follow the [logger's closing rules](../SKILL.md#close-the-session), including the 1,000-word maximum across the run. Put a separate report at `runs/<run-id>/report.md` when needed and link it from session summaries. Retrieve relevant entries and artifact portions, rather than rereading every raw log or duplicating their contents. Logs remain append-only when reports or indexes change.
 
 Raw logging is a default part of every skill's work; index maintenance follows when reusable entries warrant it. Reuse the caller's active session rather than starting another run for each focused capability. Omit persistence when the user explicitly asks. In that case, do not create persistent records and return a proportionate summary directly. If persistence is blocked by permissions or unavailable storage, disclose the limitation; do not claim records were saved.
+
+## Example completed log
+
+This fictional example illustrates entry structure and available timestamps; its results are not evidence for another session. Other sessions in this run would reference the run timing rather than reset it.
+
+```markdown
+# Charter
+
+Explore search-query handling with empty queries and whitespace variations.
+
+# Session log
+
+Run started: 2026-10-04T09:00:00-07:00. Deadline: 2026-10-04T09:05:00-07:00.
+
+### Experiment E1
+
+2026-10-04T09:00:10-07:00 — Submit a query containing only spaces to explore how an empty search is handled.
+
+### Observation O1
+
+2026-10-04T09:00:20-07:00 — From [E1](#experiment-e1): The page returns all results without an explanation. Compare a text query with and without surrounding spaces to investigate whitespace handling further.
+
+### Experiment E2
+
+2026-10-04T09:00:30-07:00 — Compare the results for `duck` and ` duck `.
+
+### Observation O2
+
+2026-10-04T09:00:45-07:00 — From [E2](#experiment-e2): Both queries return the same results.
+
+# Findings summary
+
+- A spaces-only query returns all results without an explanation ([O1](#observation-o1)). Whether this is intended remains an open question.
+- Surrounding spaces did not change the results for the text query tested ([O2](#observation-o2)). Other queries remain untested.
+- Closed at 09:01:00 (one minute elapsed): the bounded behavior question is answered; the product-intent question remains a follow-up.
+```

@@ -28,11 +28,11 @@ The loop below remains usable when a focused skill is unavailable. Establish one
 
 ## Steer the run toward risk
 
-The caller supplies the initial mission or charter. Maintain a running charter list beginning with that initial charter. Reuse orientation.md when available; otherwise use orient-to-software. Use charter-exploration to carve broad missions into focused charters and add new candidates as observations reveal interesting behavior.
+The caller supplies the initial mission or charter. Maintain a running charter list beginning with that initial charter. Reuse existing orientation and caller-provided context. Use orient-to-software only when missing knowledge prevents choosing a faithful first experiment; the absence of orientation.md does not itself require an orientation session. Use charter-exploration to carve broad missions into focused charters and add new candidates as observations reveal interesting behavior within the mission.
 
 Keep the initial charter in the raw session log. Create runs/<run-id>/charters.md when multiple candidates need tracking or the run needs a resumable backlog, unless the caller supplies another location or opts out of persistence. Record each charter's mission, status, priority rationale, and links to the observations and sessions that informed it. Preserve completed and unfinished charters rather than deleting their history.
 
-Steer toward risk: prioritize novel information and the likelihood of undesirable behavior based on existing observations and all available evidence. Reassess priorities as information emerges and after each session, then automatically select the next promising charter without asking the caller to approve each selection. A new charter starts a new session and log; the caller may also split one charter across multiple sessions. Keep the running list and the next selection within the caller's mission and authority.
+Steer toward risk: prioritize novel information and the likelihood of undesirable behavior based on existing observations and all available evidence. Reassess priorities as information emerges and after each session. For a broad discovery mission, automatically select the next promising charter without asking the caller to approve each selection. For a bounded question, continue only while more evidence is needed to answer it to the requested confidence. A new charter starts a new session and log; the caller may also split one charter across multiple sessions. Keep the running list and the next selection within the caller's mission and authority.
 
 ## Run the exploration loop
 
@@ -54,14 +54,17 @@ When the user asks to fix a confirmed problem, close or pause the exploration re
 
 ## Finish or pause deliberately
 
-Finish the current charter when its question is answered, further experiments would yield no useful new information, or another charter has greater information value. Update the list and automatically continue with the next charter while the run remains within its limits. Pause when useful continuation requires missing authority or information.
+Finish the current charter when its question is answered, further experiments would yield no useful new information, or another charter has greater information value. Update the list; continue with the next charter only while the mission still needs investigation and the run remains within its limits. Pause when useful continuation requires missing authority or information.
 
-End the overall run at the first of these three stopping conditions:
+Record the run's start and deadline once in the first raw log, or in the active run context when persistence is disabled. Include instruction loading, startup, orientation, research, record maintenance, and reporting in the elapsed budget; do not reset it per charter. Reuse timestamps supplied by the execution environment, checking the clock at decisions such as starting a potentially long operation or selecting another charter. Leave enough time for a proportionate closing report. If reliable timing is unavailable, disclose that limit rather than inventing elapsed time. A prompted timebox does not independently enforce a hard deadline.
 
-- The total exploration timebox expires: one hour by default across all charters and sessions, including orientation and research performed during the run. Honor a caller-specified timebox; a longer budget does not remove the other stopping conditions. Track elapsed time from the start of the run rather than resetting the budget per charter.
+End the overall run at the first applicable stopping condition:
+
+- The caller's bounded question is answered to the requested confidence. Preserve useful out-of-scope leads as follow-up candidates rather than extending the mission to pursue them.
+- The total run timebox is reached: one hour by default across all charters and sessions. Honor a caller-specified timebox; it is a maximum, not a duration to fill. Stop experiments early enough to close within it. A longer budget does not remove the other stopping conditions.
 - No charters remain to pursue: the available evidence offers no further identified source of novel risk information. This is exhaustion of the current candidate list, not proof that the software has no undiscovered risks.
 - Abort after five consecutive experiments in which every attempted operation encounters an obvious problem and failures are so pervasive or catastrophic that further exploration is unlikely to yield valuable new information, such as every operation returning HTTP 500 or another error. Count consecutive experiments across charter and session boundaries; reset the streak when an experiment no longer meets this condition. Do not treat five distinct, informative defect discoveries as pervasive failure by themselves.
 
-Record whether the run ended because of its timebox, exhausted charters, or an abort, preserving evidence and unfinished charters with their current priorities. Do not claim exhaustive coverage merely because many cases ran.
+Record the stopping or pause reason, elapsed time when known, and any overrun, preserving evidence and unfinished charters with their current priorities. Do not claim exhaustive coverage merely because many cases ran.
 
 Conclude with what was explored, confirmed findings and their evidence, unresolved surprises, rejected and untested hypotheses, material coverage gaps, useful next experiments, and the disposition of temporary artifacts. A session does not pass or fail.

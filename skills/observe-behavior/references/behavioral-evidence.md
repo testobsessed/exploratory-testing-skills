@@ -29,7 +29,7 @@ Source and documentation are maps. Use them to form hypotheses and explain obser
 - **Not reproduced:** attempted under stated conditions without observing it.
 - **Open question:** material uncertainty remains.
 - **Surprise:** behavior differs from an expectation whose authority is unresolved.
-- **Defect:** observed behavior conflicts with an applicable oracle strongly enough to warrant correction.
+- **Defect:** behavior meets the [report-bugs](../../report-bugs/SKILL.md) criteria: a reliably reproducible specification violation or behavior obviously wrong in context. Uncertain concerns and unreliable failures remain observations.
 
 Do not use “not reproduced” to mean impossible. Do not use “confirmed” when the evidence only shows correlation.
 

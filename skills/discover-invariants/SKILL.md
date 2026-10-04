@@ -15,6 +15,6 @@ Existing patterns include:
 - isolation: actions on one user, scenario, tenant, stream, or object do not unexpectedly affect another;
 - temporal integrity: delayed results apply to the state or candidate actually evaluated.
 
-Record why each candidate should hold and the conditions in which it applies. Treat a candidate as a fallible expectation, not an established fact. When stakeholders have not agreed that the rule applies, report the observation and product question rather than unilaterally declaring a defect.
+Record why each candidate should hold and the conditions in which it applies. Treat a candidate as a fallible expectation, not an established fact. Use [report-bugs](../report-bugs/SKILL.md) as the authority for deciding whether an observation warrants a bug report. An unresolved expectation remains a product question unless the behavior meets that skill's reporting criteria; explicit stakeholder agreement is not required for reliably reproducible behavior that is obviously wrong in context.
 
 Surface information for the human or downstream agent to decide what to do; stakeholder agreement is not a prerequisite to reporting a surprise. This skill need not adjudicate or argue whether intended behavior is acceptable. Preserve candidate rules and contradictory evidence promptly in the existing raw log, using exploratory-session-log by default unless the user opts out. Index reusable entries at session closure or handoff; do not repeat run setup or load logging guidance already in context.
