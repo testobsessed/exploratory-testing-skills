@@ -18,7 +18,7 @@ This split maps the original explore-software material into nine focused capabil
 
 The field study remains historical evidence, not operational instructions. Its suggested fixed-input reasoning-stability check remains a future experiment-design improvement; this content split does not claim to implement that recommendation.
 
-Shared boundaries remain in the coordinator where needed to govern the whole session. Focused skills can be used independently. The note protocol owns the detailed closing summary, while the coordinator retains the stopping decision.
+The calling explorer agent or coordinator owns run scope, budget, and stopping decisions. Focused skills can be used independently without requiring explore-software. The note protocol owns prompt append-only raw capture; supporting indexes and summaries are created when useful and updated at natural checkpoints. A short single-session closing summary may serve as the run report.
 
 The append helper and template moved together to log-exploration without behavioral changes. Existing notes using the explore-software append-only marker remain compatible; callers using the old helper path must use skills/log-exploration/scripts/append-session-note.py.
 

@@ -17,4 +17,4 @@ At each discovered point, record:
 
 Use this map to choose where to vary a condition and where to observe its effects. A point may offer control without direct observation, observation without control, or both; connect points when an effect is visible elsewhere. Keep the map provisional rather than requiring a complete system inventory before experimenting.
 
-Use exploratory-session-log to record meaningful discoveries and decisions promptly in the raw session log and index reusable information, unless the user explicitly asks not to log. Reuse the current application records when invoked within an existing run. If that skill is unavailable, append dated evidence and uncertainties in the caller's shared workspace and link reusable entries from its application index.
+Use exploratory-session-log unless the caller opts out; reuse the active session and guidance already loaded. Capture raw evidence promptly, indexing at closure or handoff. Standalone requests need only a proportionate raw record; create supporting records when useful. If the logger is unavailable, append dated evidence in the caller's workspace.

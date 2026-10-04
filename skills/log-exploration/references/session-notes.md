@@ -43,7 +43,7 @@ Do not force all six labels into trivial entries, but do not omit information ne
 
 ## Close or pause
 
-Append `## Summary` only when closing or pausing the session. Keep it brief and link to the run report. At run closure or pause, write the separate report described in application-records.md, capped at 1,000 words and substantially shorter for short runs. Do not rewrite the raw stream while producing either summary. Select what matters from:
+Append `## Summary` only when closing or pausing the session. Keep it brief and link to a separate run report when needed. At run closure or pause, follow the reporting rules in application-records.md: a short single-session closing summary may serve as the report; multiple sessions or a caller request need a separate report. Keep either form within 1,000 words and substantially shorter for short runs. Do not rewrite the raw stream while producing either summary. Select what matters from:
 
 1. the charter and scope actually covered;
 2. confirmed findings with evidence;

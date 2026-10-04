@@ -20,14 +20,14 @@ An instruction to explore, investigate, reproduce, or characterize does not by i
 
 Use the charter to bound the investigation; revise the questions as observations change the working model.
 
-Use exploratory-session-log to record meaningful discoveries and decisions promptly in the raw session log and index reusable information, unless the user explicitly asks not to log. Reuse the current application records when invoked within an existing run. If that skill is unavailable, append dated evidence and uncertainties in the caller's shared workspace and link reusable entries from its application index.
+Use exploratory-session-log unless the caller opts out; reuse the active session and guidance already loaded. Capture raw evidence promptly, indexing at closure or handoff. Standalone requests need only a proportionate raw record; create supporting records when useful. If the logger is unavailable, append dated evidence in the caller's workspace.
 
 ## Slice a broad mission into charters
 
-The caller supplies the initial mission or charter; it may be as broad as “Explore DuckSim to discover unknown unknowns.” Use existing orientation, variables, observations, and other available evidence to carve off focused charters that can yield useful information. When orientation is missing, use orient-to-software to establish what can be done with the target.
+The caller supplies the initial mission or charter; it may be as broad as “Explore DuckSim to discover unknown unknowns.” Use existing orientation, variables, observations, and other available evidence to carve off focused charters that can yield useful information. When an exploratory run needs missing orientation, use orient-to-software to establish what can be done with the target. For a standalone chartering request, use available context and state gaps without starting orientation.
 
 Steer toward risk: favor the novelty of information a charter could reveal and the likelihood of undesirable behavior, grounded in existing observations and all other available information. Explain the evidence behind each candidate's priority; do not invent numerical risk scores or mistake an untested suspicion for a finding.
 
 Give each candidate a concise mission, the question or risk it investigates, and why pursuing it could yield new information. Revise candidates and their priorities as findings emerge. Avoid repeating established information unless a new variation or contradiction makes further exploration informative.
 
-The explore-software orchestrator owns the running charter list and automatically selects the next charter. Chartering supplies focused missions and priority reasoning; each selected charter starts a separately logged session. A broad mission is an adaptive exploration plan, not a predetermined experiment script.
+The calling agent or coordinator owns the running charter list, budget, and next selection. This skill supplies focused missions and priority reasoning without requiring a particular coordinator skill. Contribute to the current run when one exists; a standalone chartering request does not initiate an exploratory run. Each charter selected for execution starts a separately logged session. A broad mission is an adaptive exploration plan, not a predetermined experiment script.

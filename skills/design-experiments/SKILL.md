@@ -11,4 +11,4 @@ Do not vary everything at once. Choose a comparison that isolates a meaningful d
 
 Read [references/experiment-design.md](references/experiment-design.md) when choosing comparisons, investigating asynchronous behavior, tracing data across surfaces, or following a surprise. Use observed results to choose the next useful experiment.
 
-Use exploratory-session-log to record meaningful discoveries and decisions promptly in the raw session log and index reusable information, unless the user explicitly asks not to log. Reuse the current application records when invoked within an existing run. If that skill is unavailable, append dated evidence and uncertainties in the caller's shared workspace and link reusable entries from its application index.
+Use exploratory-session-log unless the caller opts out; reuse the active session and guidance already loaded. Capture raw evidence promptly, indexing at closure or handoff. Standalone requests need only a proportionate raw record; create supporting records when useful. If the logger is unavailable, append dated evidence in the caller's workspace.

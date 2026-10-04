@@ -11,7 +11,7 @@ Use source code, documentation, and existing tests to orient, generate hypothese
 
 Read the application’s existing `orientation.md` before new orientation. Later exploratory sessions reuse this summary instead of automatically rerunning orientation; another orientation may be intentionally initiated by the user or calling agent.
 
-Establish default logging and the application index with exploratory-session-log before substantive work, unless the user explicitly opts out. Use research-domain to reuse cached domain context or perform the initial five-minute research when none exists. Further research requires an explicit caller request; continue with recorded gaps when the timebox expires. If research-domain is unavailable, follow the same cache-first and timebox boundaries using available sources. Documentation and repository access help but are not prerequisites.
+Establish one raw session log with exploratory-session-log before substantive work, unless the user explicitly opts out. Reuse the caller's active run and record location. Read only guidance relevant to the next probe; do not preload every focused skill or scaffold an index and summaries at startup. Use research-domain to reuse cached domain context or perform the initial five-minute research when none exists. Further research requires an explicit caller request; continue with recorded gaps when the timebox expires. If research-domain is unavailable, follow the same cache-first and timebox boundaries using available sources. Documentation and repository access help but are not prerequisites.
 
 ## Get running and map the first interface
 
@@ -23,13 +23,13 @@ Look for indications that authentication is needed, especially when it blocks us
 
 Use [identify-variables](../identify-variables/SKILL.md) during orientation to map variables as the available actions become clear. Use its existing guidance rather than duplicating the variable-mapping process here or in charter-exploration. Draw on map-touch-points and observe-behavior as questions arise. Record what remains inferred or inaccessible and how that limits subsequent experiments.
 
-Record discoveries promptly in the raw session log and link reusable context from the application index. Use research to guide behavioral probes and revise the working model when evidence disagrees.
+Record discoveries and startup blockers promptly in the raw session log. Link reusable context from the application index at session closure or handoff. Use research to guide behavioral probes and revise the working model when evidence disagrees.
 
 ## Stop orientation
 
 Default to a five-minute timebox for the orientation session; the caller may override it when invoking the skill. Track elapsed time from the start of the session. Stop exploring when the timebox expires or when three consecutive experiments yield no new information, whichever comes first. Reset that count when an experiment produces new information. These are stopping heuristics, not claims of complete coverage.
 
-On stopping, close the session log and update `orientation.md` with what was learned and any material gaps or blockers. Do not extend exploration merely to complete the map.
+On stopping, close the session log. Create or update `orientation.md` when application capabilities or reusable access requirements were learned; if startup yielded only an environment blocker, keep it in the raw log and closing summary without creating an empty orientation summary. Do not extend exploration merely to complete the map.
 
 ## Maintain the reusable orientation summary
 
@@ -37,4 +37,4 @@ Maintain one file named `orientation.md` at the top of the application’s struc
 
 Each orientation session still produces its own append-only session log under the shared session-log convention. The reusable summary has no run or session ID in its filename and is distinct from those raw logs and the run report.
 
-At the end of orientation, distill the session’s findings into `orientation.md` and link it from the application index. If it already exists, modify the relevant portions in place with new information. Do not create another orientation summary or replace the existing summary wholesale. Preserve useful previous knowledge and evidence links; make changed understanding and unresolved contradictions visible. Retain the raw session logs as the history supporting these updates.
+When orientation yields reusable knowledge, distill it into `orientation.md` at session closure and link it from the application index. If it already exists, modify the relevant portions in place with new information. Do not create another orientation summary or replace the existing summary wholesale. Preserve useful previous knowledge and evidence links; make changed understanding and unresolved contradictions visible. Retain the raw session logs as the history supporting these updates.

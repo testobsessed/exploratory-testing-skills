@@ -27,7 +27,7 @@ The twelve primary skills separate focused capabilities from session coordinatio
 | Orientation sessions | [orient-to-software](skills/orient-to-software/SKILL.md) |
 | Exploratory sessions | [explore-software](skills/explore-software/SKILL.md) |
 
-Exploration logs and a persistent application index are created by default unless the user opts out. Domain research reuses cached entries; initial research is capped at five minutes unless the caller specifies otherwise. Further research requires a caller request. A run can span multiple sessions and ends with a proportionate report of at most 1,000 words linking to raw evidence. See [shared application records](skills/exploratory-session-log/references/application-records.md) for storage and structure and [the content map](docs/skill-content-map.md) for capability boundaries.
+Raw exploration logs are kept by default unless the user opts out. Supporting records are created when useful; indexes are updated at session closure or handoff. The calling explorer agent can own coordination directly and use focused skills without explore-software. Domain research reuses cached entries; initial research is capped at five minutes unless the caller specifies otherwise. Further research requires a caller request. A run can span multiple sessions and ends with a proportionate report of at most 1,000 words linking to raw evidence. See [shared application records](skills/exploratory-session-log/references/application-records.md) for storage and structure and [the content map](docs/skill-content-map.md) for capability boundaries.
 
 ## Usage and overrides
 

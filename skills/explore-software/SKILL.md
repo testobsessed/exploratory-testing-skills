@@ -9,7 +9,9 @@ Explore by simultaneously learning, designing experiments, executing them, inter
 
 ## Draw on capabilities as needed
 
-Use the available focused skills when a question calls for them; they are not a fixed sequence:
+Use the available focused skills when a question calls for them; they are not a fixed sequence. Load only the skill or reference needed for the current decision, and reuse guidance already in context. Do not preload the whole pack before the first behavioral probe. Keep one run context containing the mission, authority, elapsed budget, current charter, and record location; focused skills contribute to it without repeating setup. A calling explorer agent may own coordination directly; focused capabilities do not require this coordinator skill.
+
+Available capabilities:
 
 - charter-exploration: frame the mission, scope, authority, and stopping conditions;
 - map-touch-points: discover connected places to control and observe behavior;
@@ -22,13 +24,13 @@ Use the available focused skills when a question calls for them; they are not a 
 - research-domain: reuse or gather timeboxed domain context for orientation;
 - orient-to-software: build context when unfamiliar with the software.
 
-The loop below remains usable when a focused skill is unavailable. Use logging guidance before substantive exploration unless the user explicitly opts out; honor their format and location. Maintain the application index promptly and produce one proportionate report per run, spanning its sessions, with links to raw evidence and a maximum of 1,000 words. If logging guidance is unavailable, append dated raw records immediately and maintain a small topic index in the caller's workspace; do not defer capture until reporting.
+The loop below remains usable when a focused skill is unavailable. Establish one raw session log before substantive exploration unless the user opts out; honor their format and location. Preserve intent, observations, and blockers as they occur. Create supporting records only when they have useful content, and update the application index at session closure or handoff. At run closure, report with links to raw evidence and a maximum of 1,000 words; a short single-session run may use its closing findings summary as the report. If logging guidance is unavailable, append dated raw records in the caller's workspace without deferring capture until reporting.
 
 ## Steer the run toward risk
 
 The caller supplies the initial mission or charter. Maintain a running charter list beginning with that initial charter. Reuse orientation.md when available; otherwise use orient-to-software. Use charter-exploration to carve broad missions into focused charters and add new candidates as observations reveal interesting behavior.
 
-Keep the list in runs/<run-id>/charters.md within the shared application records, unless the caller supplies another location or opts out of persistence. Record each charter's mission, status, priority rationale, and links to the observations and sessions that informed it. Preserve completed and unfinished charters rather than deleting their history.
+Keep the initial charter in the raw session log. Create runs/<run-id>/charters.md when multiple candidates need tracking or the run needs a resumable backlog, unless the caller supplies another location or opts out of persistence. Record each charter's mission, status, priority rationale, and links to the observations and sessions that informed it. Preserve completed and unfinished charters rather than deleting their history.
 
 Steer toward risk: prioritize novel information and the likelihood of undesirable behavior based on existing observations and all available evidence. Reassess priorities as information emerges and after each session, then automatically select the next promising charter without asking the caller to approve each selection. A new charter starts a new session and log; the caller may also split one charter across multiple sessions. Keep the running list and the next selection within the caller's mission and authority.
 

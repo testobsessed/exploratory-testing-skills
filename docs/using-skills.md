@@ -2,7 +2,7 @@
 
 Call a focused skill by name when you need that capability, or ask `explore-software` to coordinate an exploratory session. The skills support web applications, desktop applications, services without a GUI, command-line tools, and other software. They are capabilities to use as needed, not a fixed sequence.
 
-For unfamiliar software, use [orient-to-software](../skills/orient-to-software/SKILL.md). Its predefined charter is: “Explore the target software with all the information available, to discover what I can do with it.” For later exploration, supply a charter or broad mission describing what you want to learn; reuse the application’s existing orientation and research. The orchestrator maintains a running charter list, creates focused charters from observations, and automatically selects the next charter while steering toward novel information about risks or defects.
+For unfamiliar software, use [orient-to-software](../skills/orient-to-software/SKILL.md). Its predefined charter is: “Explore the target software with all the information available, to discover what I can do with it.” For later exploration, supply a charter or broad mission describing what you want to learn; reuse the application’s existing orientation and research. The calling explorer agent or coordinator owns the mission, budget, charter list, and next selection. Focused skills contribute techniques and evidence within that shared context; they do not require explore-software or repeat session setup. Load only the guidance needed for the current question, reusing what is already in context.
 
 ## Defaults and supported overrides
 
@@ -15,7 +15,7 @@ State overrides in the request to the skill. A calling agent can also supply the
 | Orientation duration | Five minutes for the orientation session | “Use a ten-minute orientation timebox” |
 | Initial domain research duration | Five minutes when no cached research exists | “Timebox initial domain research to two minutes” |
 | Further domain research | Reuse cached research; do not automatically refresh gaps or contradictions | Explicitly request additional research and describe its scope |
-| Persistence | Write session logs and maintain the application index | “Do not persist records; return findings directly” |
+| Persistence | Keep raw session logs; create supporting records when useful and index at checkpoints | “Do not persist records; return findings directly” |
 | Information repository location | `exploration/` in the target application project, or an established project convention | Specify one shared application information directory |
 | Session-log destination and format | Shared session paths and Markdown | Specify the log destination and required format |
 | Session boundaries | A new charter starts a new session and separate log | Explicitly start additional sessions under the same charter |
@@ -46,7 +46,9 @@ exploration/
 
 `orientation.md` is the single reusable summary of what can be done with the application. Later sessions read it rather than automatically rerunning orientation. When a user or agent intentionally runs orientation again, update relevant portions of that same summary in place, preserving useful knowledge and evidence links.
 
-Raw session logs remain separate and append-only, with a charter first, experiments and observations recorded as they occur, bug reports when warranted, and a closing findings summary. One run report spans the run’s sessions and is at most 1,000 words. The report cap, append-only raw history, canonical `orientation.md` filename, and reviewer ownership of severity and priority are established conventions, not configurable defaults currently offered by these skills.
+The layout above gives destinations, not a startup checklist. Begin with one raw log; create an index for reusable entries, a charter list for multiple candidates or a resumable backlog, and orientation.md for learned capabilities or reusable access requirements. Index at natural checkpoints such as session closure or handoff. A startup blocked solely by the environment may need only its raw log and closing summary.
+
+Raw session logs remain separate and append-only, with a charter first, experiments and observations recorded as they occur, bug reports when warranted, and a closing findings summary. One report spans the run’s sessions and is at most 1,000 words; a short single-session run may use its closing findings summary, while multi-session runs or an explicit caller request use a separate report. The report cap, append-only raw history, canonical `orientation.md` filename, and reviewer ownership of severity and priority are established conventions, not configurable defaults currently offered by these skills.
 
 See [shared application records](../skills/exploratory-session-log/references/application-records.md) and [report-bugs](../skills/report-bugs/SKILL.md) for the maintained operational rules.
 
