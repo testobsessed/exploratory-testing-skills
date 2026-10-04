@@ -31,7 +31,7 @@ Raw exploration logs are kept by default unless the user opts out. Supporting re
 
 ## Usage and overrides
 
-See [Using the skills](docs/using-skills.md) for default behavior, supported caller overrides, result locations, and example requests.
+See [Using the skills](docs/using-skills.md) for default behavior, supported caller overrides, result locations, and example requests. See [Delegating an exploratory investigation](docs/delegating-exploration.md) for startup authorization, runtime access, and a reusable explorer assignment.
 
 ## Local installation
 
