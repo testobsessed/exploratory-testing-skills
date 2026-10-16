@@ -2,6 +2,8 @@
 
 Skills, supporting research, and behavioral evaluations for an agent that explores software as it is being developed.
 
+Friday October 16: This is a work in progress, very much incomplete. Feedback welcome.
+
 ## Repository layout
 
 - `skills/`: independently discoverable agent skills; each skill will have its own `SKILL.md`
